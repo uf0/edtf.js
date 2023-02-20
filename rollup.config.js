@@ -1,6 +1,6 @@
 import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
-import { importAssertionsPlugin } from 'rollup-plugin-import-assert'
+import unassert from 'rollup-plugin-unassert';
 
 export default [
   {
@@ -13,7 +13,7 @@ export default [
     plugins: [
       json(),
       commonjs(),
-      importAssertionsPlugin()
+      unassert()
     ],
     external: [
       'assert',
