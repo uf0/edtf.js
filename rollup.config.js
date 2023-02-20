@@ -6,8 +6,8 @@ export default [
   {
     input: 'index.js',
     output: {
-      file: 'dist/index.cjs',
-      format: 'cjs',
+      file: 'dist/index.js',
+      format: 'es',
       exports: 'named'
     },
     plugins: [
