@@ -5,11 +5,19 @@ import unassert from 'rollup-plugin-unassert';
 export default [
   {
     input: 'index.js',
-    output: {
-      file: 'dist/index.js',
-      format: 'es',
-      exports: 'named'
-    },
+    output:[
+      {
+        file: 'dist/index.cjs',
+        format: 'cjs',
+        exports: 'named',
+      },
+      {
+        file: 'dist/index.esm.js',
+        format: 'esm',
+        exports: 'named',
+        sourcemap: true
+      },
+    ] ,
     plugins: [
       json(),
       commonjs(),
